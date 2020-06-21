@@ -1,15 +1,16 @@
 import React, { useContext } from 'react';
 // import { csv } from 'd3';
 // import data from '../data/hero-network.csv';
+
 import { AppContext } from '../../app/AppProvider';
 
-function HomePage () {
+function Network () {
 
     const { startDate } = useContext(AppContext);
 
     return (
         <div>
-            HomePage
+            Network
             <p>
                 { startDate }
             </p>
@@ -17,4 +18,4 @@ function HomePage () {
     )
 }
 
-export default HomePage;
+export default Network;
