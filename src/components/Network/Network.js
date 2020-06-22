@@ -2,18 +2,23 @@ import React, { useContext } from 'react';
 // import { csv } from 'd3';
 // import data from '../data/hero-network.csv';
 
+import { ForceGraph2D } from 'react-force-graph';
 import { AppContext } from '../../app/AppProvider';
 
-function Network () {
+function Network() {
 
-    const { startDate } = useContext(AppContext);
+    const { testData } = useContext(AppContext);
+
+    console.log(testData)
 
     return (
         <div>
-            Network
-            <p>
-                { startDate }
-            </p>
+            <ForceGraph2D 
+            graphData = { testData } 
+            linkDirectionalParticles="value"
+            linkDirectionalParticleSpeed={d => d.value * 0.001}
+            linkDirectionalParticleWidth={1}
+            />
         </div>
     )
 }

@@ -6,6 +6,7 @@ import { AppContext } from '../../app/AppProvider';
 function HomePage () {
 
     const { startDate } = useContext(AppContext);
+    
 
     return (
         <div>
