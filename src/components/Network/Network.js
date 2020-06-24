@@ -3,15 +3,36 @@ import React, { useContext } from 'react';
 // import data from '../data/hero-network.csv';
 
 import { ForceGraph3D } from 'react-force-graph';
-import SpriteText from 'three-spritetext';
-
 import { AppContext } from '../../app/AppProvider';
+import { Search } from '../../components';
 
 function Network() {
 
-    const { testData } = useContext(AppContext);
+    const { nodes, links, displayLinks, displayNodes } = useContext(AppContext);
 
-    console.log(testData)
+    const data = {
+        nodes: displayNodes,
+        links: displayLinks,
+    }
+
+    var filterNodes = {};
+    if (nodes !== null){
+        filterNodes = nodes.filter( node => node.name.toLowerCase().includes('spider') )
+        // console.log(filterNodes);
+    }
+
+    if (data.nodes !== null && data.links !== null) {
+        // console.log(data)
+    }
+    // console.log(data)
+    /*
+    <ForceGraph2D
+                    graphData={ data }
+                    linkDirectionalParticles="value"
+                    linkDirectionalParticleSpeed={d => d.value * 0.001}
+                    linkDirectionalParticleWidth={1}
+                />
+    */
 
     const genRandomTree = (N = 1000) => {
         return {
@@ -29,19 +50,14 @@ function Network() {
 
     return (
         <div>
-            <ForceGraph3D 
-            graphData = { testData } 
-            nodeLabel="name"
-            nodeThreeObject={node => {
-                const sprite = new SpriteText(node.id);
-                sprite.color = node.color;
-                sprite.textHeight = 8;
-                return sprite;
-              }}
-            linkDirectionalParticles="value"
-            linkDirectionalParticleSpeed={d => d.value * 0.001}
-            linkDirectionalParticleWidth={2}
-            />
+            <Search />
+
+            {data.nodes !== null && data.links !== null
+                ? <ForceGraph3D
+                    graphData={ data }
+                    nodeAutoColorBy="type"
+                />
+                : "Loading..."}
         </div>
     )
 }
