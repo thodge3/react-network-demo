@@ -9,10 +9,27 @@ export const AppContext = React.createContext();
 export class AppProvider extends React.Component {
     constructor(props) {
         super(props);
+
+        this.nodeHandler = (updatedNodes) => {
+            this.setState({
+                displayNodes: updatedNodes
+            })
+        }
+
+        this.linkHandler = (updatedLinks) => {
+            this.setState({
+                displayLinks: updatedLinks
+            })
+        }
+
         this.state = {
             startDate: moment().format('YYYY-MM-DD HH:mm:ss'),
+            nodeHandler: this.nodeHandler,
+            linkHandler: this.linkHandler,
             nodes: null,
             links: null,
+            displayNodes: null,
+            displayLinks: null,
             testData: {
                 "nodes": [
                     {
@@ -95,6 +112,7 @@ export class AppProvider extends React.Component {
 
             this.setState({
                 links: [...newObj],
+                displayLinks: [...newObj]
             })
         })
     }
@@ -109,7 +127,8 @@ export class AppProvider extends React.Component {
                 val: 1
             }))
             this.setState({
-                nodes: [...newNode]
+                nodes: [...newNode],
+                displayNodes: [...newNode]
             })
         })
     }

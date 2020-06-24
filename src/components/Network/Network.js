@@ -4,18 +4,25 @@ import React, { useContext } from 'react';
 
 import { ForceGraph3D } from 'react-force-graph';
 import { AppContext } from '../../app/AppProvider';
+import { Search } from '../../components';
 
 function Network() {
 
-    const { nodes, links } = useContext(AppContext);
+    const { nodes, links, displayLinks, displayNodes } = useContext(AppContext);
 
     const data = {
-        nodes: nodes,
-        links: links
+        nodes: displayNodes,
+        links: displayLinks,
+    }
+
+    var filterNodes = {};
+    if (nodes !== null){
+        filterNodes = nodes.filter( node => node.name.toLowerCase().includes('spider') )
+        // console.log(filterNodes);
     }
 
     if (data.nodes !== null && data.links !== null) {
-        console.log(data)
+        // console.log(data)
     }
     // console.log(data)
     /*
@@ -29,12 +36,14 @@ function Network() {
 
     return (
         <div>
+            <Search />
+
             {data.nodes !== null && data.links !== null
                 ? <ForceGraph3D
                     graphData={ data }
                     nodeAutoColorBy="type"
                 />
-                : "null"}
+                : "Loading..."}
         </div>
     )
 }
