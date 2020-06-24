@@ -16,12 +16,31 @@ function Search() {
     }
 
     const handleChange = (e, { value }) => {
+        let updateLinks = [];
+
+        value.forEach(element => {
+            updateLinks.push(
+                links.filter( link => link.target.name.toLowerCase().includes(element.toLowerCase()) || link.source.name.toLowerCase().includes(element.toLowerCase()) )
+            )
+        });
         // let updateNodes = nodes.filter( node => node.name.toLowerCase().includes(value.toLowerCase()))
-        let updateLinks = links.filter( link => link.target.name.toLowerCase().includes(value.toLowerCase()) || link.source.name.toLowerCase().includes(value.toLowerCase()) )
+        // let updateLinks = links.filter( link => link.target.name.toLowerCase().includes(value.toLowerCase()) || link.source.name.toLowerCase().includes(value.toLowerCase()) )
         // console.log(updateNodes)
         console.log(updateLinks)
         // nodeHandler(updateNodes);
         linkHandler(updateLinks);
+    }
+
+    const testHandleChange = (e, { value }) => {
+        console.log(value);
+        let updateLinks = [];
+        value.forEach(element => {
+            let newArray = links.filter( link => link.target.name.toLowerCase().includes(element.toLowerCase()) || link.source.name.toLowerCase().includes(element.toLowerCase()) )
+            updateLinks.push(newArray);
+        });
+        let mergedUpdateLinks = [].concat(...updateLinks);
+        console.log(mergedUpdateLinks);
+        linkHandler(mergedUpdateLinks);
     }
 
     return (
@@ -33,8 +52,9 @@ function Search() {
                 fluid
                 search
                 selection
+                multiple
                 options={ updatedNodes }
-                onChange={handleChange}
+                onChange={ testHandleChange }
             />
             : null }
         </div>
