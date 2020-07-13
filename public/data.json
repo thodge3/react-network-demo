@@ -1,0 +1,231 @@
+{
+    "2017": [
+      {
+        "January": {
+          "P0": 7,
+          "P1": 4,
+          "P0Open": 3,
+          "P1Open": 3
+        },
+        "Febuaray": {
+          "P0": 8,
+          "P1": 3,
+          "P0Open": 5,
+          "P1Open": 2
+        },
+        "March": {
+          "P0": 10,
+          "P1": 6,
+          "P0Open": 5,
+          "P1Open": 4
+        },
+        "April": {
+          "P0": 15,
+          "P1": 8,
+          "P0Open": 7,
+          "P1Open": 6
+        },
+        "May": {
+          "P0": 18,
+          "P1": 12,
+          "P0Open": 12,
+          "P1Open": 4
+        },
+        "June": {
+          "P0": 22,
+          "P1": 15,
+          "P0Open": 12,
+          "P1Open": 7
+        },
+        "July": {
+          "P0": 25,
+          "P1": 17,
+          "P0Open": 13,
+          "P1Open": 10
+        },
+        "August": {
+          "P0": 26,
+          "P1": 16,
+          "P0Open": 6,
+          "P1Open": 9
+        },
+        "September": {
+          "P0": 23,
+          "P1": 14,
+          "P0Open": 4,
+          "P1Open": 8
+        },
+        "October": {
+          "P0": 18,
+          "P1": 10,
+          "P0Open": 5,
+          "P1Open": 3
+        },
+        "November": {
+          "P0": 14,
+          "P1": 7,
+          "P0Open": 6,
+          "P1Open": 2
+        },
+        "December": {
+          "P0": 10,
+          "P1": 5,
+          "P0Open": 6,
+          "P1Open": 3
+        }
+      }
+    ],
+    "2018": [
+      {
+        "January": {
+          "P0": 10,
+          "P1": 1,
+          "P0Open": 5,
+          "P1Open": 1
+        },
+        "Febuaray": {
+          "P0": 7,
+          "P1": 6,
+          "P0Open": 3,
+          "P1Open": 2
+        },
+        "March": {
+          "P0": 12,
+          "P1": 3,
+          "P0Open": 4,
+          "P1Open": 3
+        },
+        "April": {
+          "P0": 18,
+          "P1": 6,
+          "P0Open": 10,
+          "P1Open": 4
+        },
+        "May": {
+          "P0": 14,
+          "P1": 12,
+          "P0Open": 6,
+          "P1Open": 6
+        },
+        "June": {
+          "P0": 23,
+          "P1": 8,
+          "P0Open": 17,
+          "P1Open": 2
+        },
+        "July": {
+          "P0": 14,
+          "P1": 9,
+          "P0Open": 8,
+          "P1Open": 3
+        },
+        "August": {
+          "P0": 9,
+          "P1": 10,
+          "P0Open": 6,
+          "P1Open": 8
+        },
+        "September": {
+          "P0": 30,
+          "P1": 7,
+          "P0Open": 21,
+          "P1Open": 2
+        },
+        "October": {
+          "P0": 16,
+          "P1": 13,
+          "P0Open": 11,
+          "P1Open": 8
+        },
+        "November": {
+          "P0": 18,
+          "P1": 3,
+          "P0Open": 15,
+          "P1Open": 1
+        },
+        "December": {
+          "P0": 15,
+          "P1": 8,
+          "P0Open": 7,
+          "P1Open": 3
+        }
+      }
+    ],
+    "2019": [
+      {
+        "January": {
+          "P0": 2,
+          "P1": 12,
+          "P0Open": 1,
+          "P1Open": 9
+        },
+        "Febuaray": {
+          "P0": 9,
+          "P1": 10,
+          "P0Open": 4,
+          "P1Open": 5
+        },
+        "March": {
+          "P0": 18,
+          "P1": 12,
+          "P0Open": 12,
+          "P1Open": 9
+        },
+        "April": {
+          "P0": 20,
+          "P1": 11,
+          "P0Open": 11,
+          "P1Open": 4
+        },
+        "May": {
+          "P0": 11,
+          "P1": 21,
+          "P0Open": 7,
+          "P1Open": 16
+        },
+        "June": {
+          "P0": 15,
+          "P1": 23,
+          "P0Open": 7,
+          "P1Open": 13
+        },
+        "July": {
+          "P0": 19,
+          "P1": 13,
+          "P0Open": 14,
+          "P1Open": 7
+        },
+        "August": {
+          "P0": 35,
+          "P1": 5,
+          "P0Open": 23,
+          "P1Open": 2
+        },
+        "September": {
+          "P0": 29,
+          "P1": 21,
+          "P0Open": 15,
+          "P1Open": 9
+        },
+        "October": {
+          "P0": 6,
+          "P1": 16,
+          "P0Open": 3,
+          "P1Open": 7
+        },
+        "November": {
+          "P0": 17,
+          "P1": 8,
+          "P0Open": 8,
+          "P1Open": 4
+        },
+        "December": {
+          "P0": 12,
+          "P1": 9,
+          "P0Open": 3,
+          "P1Open": 4
+        }
+      }
+    ]
+  }
+  

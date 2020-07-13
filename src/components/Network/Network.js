@@ -8,7 +8,7 @@ import { Search } from '../../components';
 
 function Network() {
 
-    const { nodes, links, displayLinks, displayNodes } = useContext(AppContext);
+    const { testData, nodes, links, displayLinks, displayNodes } = useContext(AppContext);
 
     const data = {
         nodes: displayNodes,
@@ -38,10 +38,12 @@ function Network() {
         <div>
             <Search />
 
-            {data.nodes !== null && data.links !== null
+            {testData.nodes !== null && testData.links !== null
                 ? <ForceGraph3D
-                    graphData={ data }
+                    graphData={ testData }
                     nodeAutoColorBy="type"
+                    linkDirectionalParticles="value"
+                    linkDirectionalParticleSpeed = { d => d.value * 0.001 }
                 />
                 : "Loading..."}
         </div>
