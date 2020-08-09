@@ -35,11 +35,25 @@ export class AppProvider extends React.Component {
                     {
                         "id": "id1",
                         "name": "name1",
+                        "color": 'white',
                         "val": 1
                     },
                     {
                         "id": "id2",
                         "name": "name2",
+                        "color": 'white',
+                        "val": 1
+                    },
+                    {
+                        "id": "id3",
+                        "name": "name3",
+                        "color": 'white',
+                        "val": 1
+                    },
+                    {
+                        "id": "id4",
+                        "name": "name4",
+                        "color": 'white',
                         "val": 1
                     },
                     {
