@@ -38,12 +38,12 @@ function Network() {
         <div>
             <Search />
 
-            {testData.nodes !== null && testData.links !== null
+            {data.nodes !== null && data.links !== null
                 ? <ForceGraph3D
-                    graphData={ testData }
+                    graphData={ data }
                     nodeAutoColorBy="type"
-                    linkDirectionalParticles="value"
-                    linkDirectionalParticleSpeed = { d => d.value * 0.001 }
+                    // linkDirectionalParticles="value"
+                    // linkDirectionalParticleSpeed = { d => d.value * 0.001 }
                 />
                 : "Loading..."}
         </div>
